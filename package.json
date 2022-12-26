@@ -1,0 +1,27 @@
+{
+  "name": "microsservice-lex",
+  "description": "Microsservice to use Amazon Lex",
+  "version": "1.0.0",
+  "keywords": [
+    "lex",
+    "microsservice",
+    "nodejs",
+    "aws"
+  ],
+  "author": "Leonardo",
+  "license": "MIT",
+  "scripts": {
+    "start": "serverless offline start",
+    "dev": "nodemon --exec npm start"
+  },
+  "devDependencies": {
+    "aws-sdk": "2.1282.0",
+    "nodemon": "2.0.20",
+    "serverless-iam-roles-per-function": "3.2.0",
+    "serverless-offline": "12.0.3"
+  },
+  "dependencies": {
+    "@aws-sdk/client-lex-runtime-v2": "3.238.0",
+    "uuid": "9.0.0"
+  }
+}

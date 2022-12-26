@@ -1,0 +1,27 @@
+service: microsservice-lex
+
+plugins:
+  - serverless-offline
+  - serverless-iam-roles-per-function
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs16.x
+  region: us-east-1
+  profile: leo-aws-lambda-${sls:stage}
+  stage: ${opt:stage, 'staging'}
+  deploymentPrefix: ${sls:stage}
+  apiGateway:
+    apiKeys: lex-${sls:stage}
+  environment: ${file(./env.yml)}
+
+custom:
+  serverless-offline:
+    apiKey: ABCDEF 
+    noPrependStageInUrl: true
+    prefix: lex
+
+functions:
+  - ${file(./infra/functions/message.yml)}

@@ -1,0 +1,12 @@
+get-message:
+  handler: functions/get-message/index.handler
+  iamRoleStatementsName: LambdaLexPermission-${sls:stage}
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - lex:RecognizeText
+      Resource: "*"
+  events:
+    - http:
+        path: /message
+        method: get

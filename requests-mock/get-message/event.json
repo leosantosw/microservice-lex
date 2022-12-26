@@ -1,0 +1,16 @@
+{
+  "body":null,
+  "headers":{
+     "Host":"localhost:3000"
+  },
+  "httpMethod":"GET",
+  "multiValueQueryStringParameters":{
+     "text":[
+        "Olá"
+     ]
+  },
+  "path":"/lex/message",
+  "queryStringParameters":{
+     "text":"Olá"
+  }
+}
