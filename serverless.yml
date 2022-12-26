@@ -24,4 +24,4 @@ custom:
     prefix: lex
 
 functions:
-  - ${file(./infra/functions/message.yml)}
+  - ${file(./infra/functions/send-message.yml)}
