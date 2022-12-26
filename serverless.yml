@@ -1,10 +1,10 @@
 service: microsservice-lex
 
+frameworkVersion: '3'
+
 plugins:
   - serverless-offline
   - serverless-iam-roles-per-function
-
-frameworkVersion: '3'
 
 provider:
   name: aws

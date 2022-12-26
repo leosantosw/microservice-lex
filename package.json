@@ -12,10 +12,12 @@
   "license": "MIT",
   "scripts": {
     "start": "serverless offline start",
-    "dev": "nodemon --exec npm start"
+    "dev": "nodemon --exec npm start",
+    "test": "mocha tests/*.test.js --exit"
   },
   "devDependencies": {
     "aws-sdk": "2.1282.0",
+    "mocha": "10.2.0",
     "nodemon": "2.0.20",
     "serverless-iam-roles-per-function": "3.2.0",
     "serverless-offline": "12.0.3"
